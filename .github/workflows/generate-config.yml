@@ -83,8 +83,13 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
+    - name: Before upload
+      run: |
+        mkdir openwrt/_config
+        cp openwrt/.config openwrt/_config
+
     - name: Upload bin directory
       uses: actions/upload-artifact@main
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: /workdir/openwrt/.config
+        path: openwrt/_config/.config
