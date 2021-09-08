@@ -1,3 +1,6 @@
+* 请开启DNS过滤IPv6
+* 请将ssrplus代理DNS改成5335端口
+
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 # Actions-OpenWrt
