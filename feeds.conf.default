@@ -8,6 +8,6 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-link custom /usr/src/openwrt/custom-feed
 src-git helloworld https://github.com/fw876/helloworld
 
-src-git chinadns-ng-luci https://github.com/w311ang/openwrt-chinadns-ng.git;luci
-src-git chinadns-ng https://github.com/w311ang/openwrt-chinadns-ng
+src-git chinadnsngluci https://github.com/w311ang/openwrt-chinadns-ng.git;luci
+src-git chinadnsng https://github.com/w311ang/openwrt-chinadns-ng
 src-git dns2tcp https://github.com/pexcn/openwrt-dns2tcp
