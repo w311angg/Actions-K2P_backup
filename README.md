@@ -1,6 +1,4 @@
 * 请开启DNS过滤IPv6
-* 请将ssrplus代理DNS改成5335端口
-* dnsmasq的DNS转发添加规则`/#/127.0.0.1#5335`
 
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
