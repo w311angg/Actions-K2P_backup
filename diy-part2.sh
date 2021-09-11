@@ -13,4 +13,4 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
-sed -i "/sed -i \"s\/option filter_aaaa '0'\/option filter_aaaa '1'\/g\" \/etc\/dnsmasq.conf/idnsmasq.conf" package/lean/default-settings/files/zzz-default-settings
+sed -i '/rm -rf \/tmp\/luci-modulecache\// r default-settings' package/lean/default-settings/files/zzz-default-settings
