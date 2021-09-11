@@ -1,1 +1,2 @@
-
+sed -i "s/option filter_aaaa '0'/option filter_aaaa '1'/g" /etc/dnsmasq.conf
+sed -i "s/option dports '2'/option dports '1'/g" /etc/config/shadowsocksr
