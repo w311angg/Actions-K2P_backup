@@ -1,4 +1,2 @@
-sed -i "s/option filter_aaaa '0'/option filter_aaaa '1'/g" /etc/dnsmasq.conf
-sed -i "s/option dports '2'/option dports '1'/g" /etc/config/shadowsocksr
-sed -i "s/option close_log_tcp '0'/option close_log_tcp '1'/g" /etc/config/passwall
-sed -i "s/option close_log_udp '0'/option close_log_udp '1'/g" /etc/config/passwall
+sed -i "s/option filter_aaaa '0'/option filter_aaaa '1'/" /etc/config/dhcp
+sed -i "s/option dports '2'/option dports '1'/" /etc/config/shadowsocksr
