@@ -19,3 +19,14 @@ sed -n -i -e '/rm -rf \/tmp\/luci-modulecache\//r default-settings' -e 1x -e '2,
 
 # 删除对于防火墙的修改
 sed -i "/REDIRECT --to-ports 53' >>/d" package/lean/default-settings/files/zzz-default-settings
+
+# 关闭passwall日志
+sed -i "s/option close_log_tcp '0'/option close_log_tcp '1'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
+sed -i "s/option close_log_udp '0'/option close_log_udp '1'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
+
+# 清空默认直连域名
+echo > package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
+
+# 全端口代理
+sed -i "s/option udp_no_redir_ports .*/option udp_no_redir_ports 'disable'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
+sed -i "s/option tcp_redir_ports .*/option tcp_redir_ports '1:65535'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
