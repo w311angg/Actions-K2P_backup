@@ -27,7 +27,7 @@ sed -i "s/option close_log_tcp '0'/option close_log_tcp '1'/" package/feeds/pass
 sed -i "s/option close_log_udp '0'/option close_log_udp '1'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
 
 # 清空默认直连域名
-echo > package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
+#echo > package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
 
 # 全端口代理
 #sed -i "s/option udp_no_redir_ports .*/option udp_no_redir_ports 'disable'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
