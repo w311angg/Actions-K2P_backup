@@ -1,2 +1,3 @@
 sed -i "s/option filter_aaaa '0'/option filter_aaaa '1'/" /etc/config/dhcp
-sed -i "s/option dports '2'/option dports '1'/" /etc/config/shadowsocksr
+#TCP全端口代理？
+#sed -i "s/option dports '2'/option dports '1'/" /etc/config/shadowsocksr
