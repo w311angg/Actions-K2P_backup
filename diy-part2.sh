@@ -29,6 +29,9 @@ sed -i "s/option close_log_udp '0'/option close_log_udp '1'/" package/feeds/pass
 # 清空默认直连域名
 #echo > package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
 
+# 不对微软直连
+sed -i "/microsoft.com/d" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
+
 # 全端口代理
 #sed -i "s/option udp_no_redir_ports .*/option udp_no_redir_ports 'disable'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
 sed -i "s/option tcp_redir_ports .*/option tcp_redir_ports '1:65535'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
