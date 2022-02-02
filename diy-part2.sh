@@ -35,3 +35,9 @@ sed -i "/microsoft.com/d" package/feeds/passwall/luci-app-passwall/root/usr/shar
 # 全端口代理
 #sed -i "s/option udp_no_redir_ports .*/option udp_no_redir_ports 'disable'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
 sed -i "s/option tcp_redir_ports .*/option tcp_redir_ports '1:65535'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
+
+# 过滤代理域名IPv6
+sed -i "s/option filter_proxy_ipv6 '0'/option filter_proxy_ipv6 '1'/" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
+
+# 默认开启ChinaDNS-NG
+sed -i "/config global/a\	option chinadns_ng '1'" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
