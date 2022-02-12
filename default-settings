@@ -1,3 +1,7 @@
 #sed -i "/config dnsmasq/a\        option filter_aaaa '1'" /etc/config/dhcp
+
 #TCP全端口代理？
 sed -i "s/option dports '2'/option dports '1'/" /etc/config/shadowsocksr
+
+# 默认fullcone NAT
+sed -i "s/option fullcone_nat '0'/option fullcone_nat '1'/" /etc/config/turboacc
