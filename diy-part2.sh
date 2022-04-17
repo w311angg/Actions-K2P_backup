@@ -30,7 +30,7 @@ sed -i "s/option close_log_udp '0'/option close_log_udp '1'/" package/feeds/pass
 #echo > package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
 
 # 不对微软直连
-sed -i "/microsoft.com/d" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
+#sed -i "/microsoft.com/d" package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/direct_host
 #echo 'microsoft.com' >> package/feeds/passwall/luci-app-passwall/root/usr/share/passwall/rules/proxy_host
 
 # 全端口代理
